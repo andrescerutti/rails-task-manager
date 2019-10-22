@@ -1,0 +1,19 @@
+<div class = " ml-3 row d-flex justify-content-center mt-3">
+<% @tasks.each do |task| %>
+<ul>
+    <li> <% if task.completed  %>
+  <i class="far fa-check-circle"></i>
+  <% else  %>
+  <i class="far fa-circle"></i>
+  <% end %>
+  <%= link_to task.title , task_path(task) %>
+  <p><%= task.details %></p>
+  <%= link_to task_path(task), method: :delete,
+      data: { confirm: "Are you sure?" } do  %>
+  <i class="fas fa-trash"></i>
+  <% end %>
+<% end %>  </li>
+</ul>
+</div>
+
+<%= link_to "new task", new_task_path %>

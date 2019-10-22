@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ul {
+  font-family: sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
